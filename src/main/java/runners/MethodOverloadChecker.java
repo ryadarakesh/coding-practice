@@ -19,6 +19,8 @@ public class MethodOverloadChecker {
                 new ArrayList<BigInteger>(),
                 new HashMap<String, String>().values()
         };
+        // It will print 3 times Unknown Collection as it is compile time
+        // polymorphism depends on reference type but not object type
         for (Collection<?> c : collections)
             System.out.println(classify(c));
     }
