@@ -23,5 +23,7 @@ public class MethodOverloadChecker {
         // polymorphism depends on reference type but not object type
         for (Collection<?> c : collections)
             System.out.println(classify(c));
+
+
     }
 }
