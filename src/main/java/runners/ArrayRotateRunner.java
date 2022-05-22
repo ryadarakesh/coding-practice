@@ -2,6 +2,8 @@ package runners;
 
 import helpers.ArrayUtils;
 
+import java.util.ArrayList;
+
 public class ArrayRotateRunner {
     public static void main(String[] args) {
         rotate(new int[]{1, 2, 3, 4, 5, 6, 7},3);
@@ -20,5 +22,7 @@ public class ArrayRotateRunner {
 
         System.out.println("\nAfter Rotation of "+posToShift);
         ArrayUtils.printElements(array);
+
+        new ArrayList<>().add(5,"1");
     }
 }
