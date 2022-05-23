@@ -1,5 +1,7 @@
 package backtracking;
 
+import helpers.ArrayUtils;
+
 public class NLengthBinaryStrings {
     static byte[] a = new byte[3];
     static int n=3;
@@ -14,7 +16,7 @@ public class NLengthBinaryStrings {
      */
     private static void binary(int i) {
         if (i == n) {
-            printArray(a);
+            ArrayUtils.printElements(a);
         } else {
             a[i] = 0;
             binary(i+1);
@@ -28,7 +30,7 @@ public class NLengthBinaryStrings {
      */
     private static void knary(int i) {
         if (i == n) {
-            printArray(a);
+            ArrayUtils.printElements(a);
         } else {
             for (int m=0; m< k; m++) {
                 a[i] = (byte)m;
@@ -37,10 +39,5 @@ public class NLengthBinaryStrings {
         }
     }
 
-    private static void printArray (byte[] a) {
-        for (byte b : a ) {
-            System.out.print(b+" ");
-        }
-        System.out.println("");
-    }
+
 }

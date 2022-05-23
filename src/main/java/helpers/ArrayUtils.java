@@ -15,4 +15,11 @@ public class ArrayUtils {
             System.out.print(ele+"  ");
         }
     }
+
+    public static void printElements(byte[] array) {
+        for (byte ele: array) {
+            System.out.print(ele+"  ");
+        }
+        System.out.println("");
+    }
 }
