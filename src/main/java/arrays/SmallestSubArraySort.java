@@ -24,13 +24,13 @@ public class SmallestSubArraySort {
         }
         if (outOfOrderEnds != 0) {
 
-            System.out.println("sub array to sort (" + getSmallerPosThanIStarts(a, minEleUnsorted) + " ," + outOfOrderEnds + ")");
+            System.out.println("sub array to sort (" + getRightPosOfEle(a, minEleUnsorted) + " ," + outOfOrderEnds + ")");
         } else {
             System.out.println("No Sort Required");
         }
     }
 
-    static int getSmallerPosThanIStarts(int[] a, int ele) {
+    static int getRightPosOfEle(int[] a, int ele) {
         for (int i = 0; i < a.length; i++) {
             if (a[i] >= ele) {
                 return i;
