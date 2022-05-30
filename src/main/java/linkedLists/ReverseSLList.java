@@ -20,6 +20,8 @@ public class ReverseSLList {
 
     }
 
+    // Every time make current node next to next of next node and then next node next to curr
+    // And then make next as head
     static SLNode reverseSLList(SLNode node) {
         SLNode head = node;
         while (node.getNext() != null) {
@@ -39,6 +41,8 @@ public class ReverseSLList {
         return revHead;
     }
 
+    // Recursively reach till end and make last node as head and return
+    // while coming back assign next of next to node and make node next to null and return node till first node become last node
     static SLNode reverseRecursive(SLNode node) {
         if (node.getNext() == null) {
             revHead = node;
