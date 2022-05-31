@@ -9,14 +9,14 @@ public class MyStackTestHelprr {
         myStack.push(2);
         myStack.push(3);
         myStack.push(4);
-        System.out.println("Stack Size-" + myStack.size());
-        System.out.println("Pop - " + myStack.pop());
-        System.out.println("Stack Size-" + myStack.size());
-        System.out.println("Peek - " + myStack.peek());
-        System.out.println("Stack Size-" + myStack.size());
-        System.out.println("Pop - " + myStack.pop());
-        System.out.println("Stack Size-" + myStack.size());
-        System.out.println("Peek - " + myStack.peek());
-        System.out.println("Stack Size-" + myStack.size());
+        System.out.println("Stack Size-"+myStack.size());
+        System.out.println("Pop - "+myStack.pop());
+        System.out.println("Stack Size-"+myStack.size());
+        System.out.println("Peek - "+myStack.peek());
+        System.out.println("Stack Size-"+myStack.size());
+        System.out.println("Pop - "+myStack.pop());
+        System.out.println("Stack Size-"+myStack.size());
+        System.out.println("Peek - "+myStack.peek());
+        System.out.println("Stack Size-"+myStack.size());
     }
 }
