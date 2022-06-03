@@ -7,8 +7,8 @@ public class BinaryTreeSize {
         BinaryTreeUtils.printElementsInLevelOrder(node);
         System.out.println("Max Element - " + size(node));
 
-        System.out.println("Size of left sub tree "+ size(node.left));
-        System.out.println("Size of right sub node "+ size(node.left));
+        System.out.println("Size of left sub tree " + size(node.left));
+        System.out.println("Size of right sub node " + size(node.left));
     }
 
     static int size(BTNode node) {
