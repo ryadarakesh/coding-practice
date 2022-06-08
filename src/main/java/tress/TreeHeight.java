@@ -13,7 +13,7 @@ public class TreeHeight {
         System.out.println("Height " + height(node));
     }
 
-    static int height(BTNode node) {
+    public static int height(BTNode node) {
         if (node == null) {
             return 0;
         }
