@@ -10,15 +10,23 @@ public class ArrayUtils {
             end--;
         }
     }
+
     public static void printElements(int[] array) {
-        for (int ele: array) {
-            System.out.print(ele+"  ");
+        for (int ele : array) {
+            System.out.print(ele + "  ");
         }
     }
 
+    public static void printElementsTill(int[] array, int pos) {
+        for (int i = 0; i <= pos && i < array.length; i++) {
+            System.out.print(array[i] + "  ");
+        }
+        System.out.println("");
+    }
+
     public static void printElements(byte[] array) {
-        for (byte ele: array) {
-            System.out.print(ele+"  ");
+        for (byte ele : array) {
+            System.out.print(ele + "  ");
         }
         System.out.println("");
     }
