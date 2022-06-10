@@ -1,4 +1,4 @@
-package pocsnippets;
+package poc_snippets;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
