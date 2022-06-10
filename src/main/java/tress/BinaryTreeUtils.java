@@ -22,6 +22,18 @@ public class BinaryTreeUtils {
         return root;
     }
 
+    public static BTNode createSmallBinaryTree() {
+        BTNode root = BinaryTreeUtils.createNodeWithLeftAndRightNode(1, 2, 3);
+        addLeftRightChilds(root.left,4,5);
+        addLeftRightChilds(root.right,6,7);
+        return root;
+    }
+
+    static void addLeftRightChilds(BTNode node, int left, int right) {
+        node.setLeft(new BTNode(left));
+        node.setRight(new BTNode(right));
+    }
+
     public static void printElementsInLevelOrder(BTNode node) {
         Queue<BTNode> q = new LinkedList<>();
         q.add(node);
