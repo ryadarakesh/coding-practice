@@ -31,15 +31,15 @@ public class BinaryTreeUtils {
 
     public static BTNode createSmallBinaryTree() {
         BTNode root = BinaryTreeUtils.createNodeWithLeftAndRightNode(1, 2, 3);
-        addLeftRightChilds(root.left,4,5);
-        addLeftRightChilds(root.right,6,7);
+        addLeftRightChilds(root.left, 4, 5);
+        addLeftRightChilds(root.right, 6, 7);
         return root;
     }
 
     public static BSTNode createBST() {
-        BSTNode root = BinaryTreeUtils.createBStNodeWithLeftAndRightNode(5,3,8);
-        addLeftRightChilds(root.left,4,5);
-        addLeftRightChilds(root.right,6,7);
+        BSTNode root = BinaryTreeUtils.createBStNodeWithLeftAndRightNode(5, 3, 8);
+        addLeftRightChilds(root.left, 2, 4);
+        addLeftRightChilds(root.right, 6, 9);
         return root;
     }
 
@@ -58,7 +58,22 @@ public class BinaryTreeUtils {
         q.add(node);
         while (!q.isEmpty()) {
             BTNode curr = q.remove();
-            System.out.print(curr.getData()+" ");
+            System.out.print(curr.getData() + " ");
+            if (curr.getLeft() != null) {
+                q.add(curr.getLeft());
+            }
+            if (curr.getRight() != null) {
+                q.add(curr.getRight());
+            }
+        }
+    }
+
+    public static void printElementsInLevelOrder(BSTNode node) {
+        Queue<BSTNode> q = new LinkedList<>();
+        q.add(node);
+        while (!q.isEmpty()) {
+            BSTNode curr = q.remove();
+            System.out.print(curr.getData() + " ");
             if (curr.getLeft() != null) {
                 q.add(curr.getLeft());
             }
