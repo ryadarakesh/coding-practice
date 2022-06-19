@@ -1,5 +1,6 @@
 package avl_trees;
 
+import tress.BSTNode;
 import tress.BTNode;
 
 public class AVLTreeUtils {
@@ -35,4 +36,25 @@ public class AVLTreeUtils {
         return Math.max(height(node.left), height(node.right)) + 1;
     }
 
+    static void printInOrder(AVLNode node) {
+        if (node == null) {
+            return;
+        }
+        printInOrder(node.getLeft());
+        System.out.print(node.getData()+" ");
+        printInOrder(node.getRight());
+    }
+
+    static boolean isAVLTree(AVLNode node) {
+        if (node == null) {
+            return true;
+        }
+        if ((node.left != null && node.data < node.left.data) || (node.right != null && node.data > node.right.data)) {
+            return false;
+        }
+        if (Math.abs(AVLTreeUtils.height(node.left) - AVLTreeUtils.height(node.right)) >= 2) {
+            return false;
+        }
+        return isAVLTree(node.left) && isAVLTree(node.right);
+    }
 }
