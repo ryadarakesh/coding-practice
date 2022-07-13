@@ -1,4 +1,4 @@
-package leetcode;
+package backtracking;
 
 import helpers.ArrayUtils;
 

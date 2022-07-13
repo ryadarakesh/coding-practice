@@ -17,6 +17,7 @@ public class ArrayUtils {
         }
     }
 
+
     public static void printElementsTill(int[] array, int pos) {
         for (int i = 0; i <= pos && i < array.length; i++) {
             System.out.print(array[i] + "  ");
