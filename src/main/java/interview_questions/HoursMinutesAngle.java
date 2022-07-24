@@ -5,6 +5,7 @@ public class HoursMinutesAngle {
         System.out.println(getAngle(12,30));
 
         System.out.println(getAngle(3,30));
+        System.out.println(getAngle(12,15));
     }
 
     public static int getAngle(int hours, int minutes) {

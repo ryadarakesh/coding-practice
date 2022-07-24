@@ -5,7 +5,7 @@ import helpers.ArrayUtils;
 public class QuickSort {
 
     public static void main(String[] args) {
-        int[] a = {10, 15, 23, 8, 7, 9, 50, 30, 55};
+        int[] a = {15,1,19,3,8,7,6,2,20,12,16};
         quickSort(a, 0, a.length - 1);
         ArrayUtils.printElements(a);
     }
@@ -28,10 +28,10 @@ public class QuickSort {
         int left = start;
         int right = end;
         while (left < right) {
-            while (a[left] <= pivot) {
+            while (left<=end && a[left] <= pivot) {
                 left++;
             }
-            while (a[right] > pivot) {
+            while (right >= start && a[right] > pivot) {
                 right--;
             }
             if (left < right) {
