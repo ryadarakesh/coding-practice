@@ -10,6 +10,7 @@ public class RightView {
         As it is right view we need to view root first and then right and left
         While visiting node if level is greater than max visited add to result
      */
+
     static void rightView(BTNode root, List<Integer> list, int level) {
         if (root == null) {
             return;

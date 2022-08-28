@@ -21,8 +21,10 @@ public class FactorialTrailingZeros {
             return -1;
         }
         int count = 0;
-        for (int i = 5; n / i > 0; i = i * 5) {
-            count = count + (n / i);
+        int i=5;
+        while (n/i>0) {
+          count = count + (n/i);
+          i=i*5;
         }
         return count;
     }

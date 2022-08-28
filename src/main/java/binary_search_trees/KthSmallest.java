@@ -26,7 +26,7 @@ static int counter = 0;
             return left;
         }
 
-        // If root found the counter element need not to search in root hence returning
+        // If root found the counter element need not to search in right hence returning
         if ( ++counter == k) {
             return node;
         }

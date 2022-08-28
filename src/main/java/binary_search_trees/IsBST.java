@@ -27,5 +27,6 @@ public class IsBST {
         }
         return node.getData() > min && node.getData() < max && isBST(node.getLeft(), min, node.getData()) && isBST(node.getRight(), node.getData(), max);
     }
+
     
 }
