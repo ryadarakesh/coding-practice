@@ -36,7 +36,7 @@ public class DPKnapsack {
                 } else if (wt[i - 1] > cw) {
                     // If current weight is greater than required weight set previous total profit without this itesm
                     dp[i][cw] = dp[i - 1][cw];
-                } else {
+                } else if (wt[i-1] <= cw) {
                     // set max of current weight without this item and max value without this item plus this item value
                     dp[i][cw] = Math.max(dp[i - 1][cw], val[i - 1] + dp[i - 1][cw - wt[i - 1]]);
                 }

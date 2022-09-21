@@ -16,10 +16,10 @@ public class SmallestSubArraySort {
             if (a[i] > maxTillNow) {
                 maxTillNow = a[i];
             } else {
+                outOfOrderEnds = i;
                 if (minEleUnsorted > a[i]) {
                     minEleUnsorted = a[i];
                 }
-                outOfOrderEnds = i;
             }
         }
         if (outOfOrderEnds != 0) {

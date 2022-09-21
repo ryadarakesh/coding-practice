@@ -23,14 +23,17 @@ public class ReverseSLList {
     // Every time make current node next to next of next node and then next node next to curr
     // And then make next as head
     static SLNode reverseSLList(SLNode node) {
-        SLNode head = node;
-        while (node.getNext() != null) {
-            SLNode next = node.getNext();
-            node.setNext(next.getNext());
-            next.setNext(head);
-            head = next;
+        SLNode prev = null;
+        SLNode current = node;
+        SLNode next = null;
+        while (current != null) {
+            next = current.getNext();
+            current.setNext(prev);
+            prev = current;
+            current = next;
         }
-        return head;
+        node = prev;
+        return node;
     }
 
     static SLNode revHead;

@@ -3,7 +3,11 @@ package arrays;
 public class ZigZagTraversal {
 
     public static void main(String[] args) {
-        zigZagTraverse(new int[][] {{1,3,4,10}, {2,5,9,11},{6,8,12,15},{7,13,14,16}});
+        zigZagTraverse(new int[][] {
+                {1,3,4,10},
+                {2,5,9,11},
+                {6,8,12,15},
+                {7,13,14,16}});
     }
     static void zigZagTraverse(int a[][]) {
         int row =0;

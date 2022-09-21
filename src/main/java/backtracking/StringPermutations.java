@@ -11,6 +11,9 @@ public class StringPermutations {
         permutations("ABC", 0);
         printResult(result);
     }
+    /*
+    Start with zero th char and replace it with every other char till end and then keep it constant in next iteration and pass i+1 for that
+     */
 
     static void permutations(String s, int index) {
        if (s.length()==index) {

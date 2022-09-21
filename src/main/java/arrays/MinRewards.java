@@ -6,7 +6,6 @@ public class MinRewards {
     /**
      * Given input is student grades the result should be in such a way that the total sum should be minimum
      * And the consecutive students rewards should be as per their scores not in other way
-     *
      * @param args
      */
     public static void main(String[] args) {
@@ -19,7 +18,7 @@ public class MinRewards {
         int[] rewardsResult = new int[a.length];
         rewardsResult[0] = 1;
         // First traverse from left to right if there is increase in grades increase rewards otherwise just keep 1
-        // as we are going to check increasing order ibelow in reverse order next to handle it
+        // as we are going to check increasing order below in reverse order next to handle it
         for (int i = 1; i < a.length; i++) {
             if (a[i] < a[i - 1]) {
                 rewardsResult[i] = 1;

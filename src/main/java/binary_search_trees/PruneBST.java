@@ -5,8 +5,6 @@ import tress.BinaryTreeUtils;
 
 public class PruneBST {
     public static void main(String[] args) {
-        ThreadLocal<String> t = new ThreadLocal<>();
-        t.set("t");
         BSTNode node = BinaryTreeUtils.createBST();
         BSTUtis.printInOrder(node);
         node = pruneBSt(node, 3, 7);
@@ -24,7 +22,6 @@ public class PruneBST {
         if (node.getData() > low && node.getData() <high) {
             return node;
         }
-        //
         if (node.getData() < low) {
             return node.getRight();
         } else if (node.getData() > high){
