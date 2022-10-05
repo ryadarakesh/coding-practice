@@ -26,8 +26,9 @@ public class DPLongestIncreasingSubSequence {
         */
         for (int j = 1; j < nums.length; j++) {
             for (int k = 0; k < j; k++) {
-                if (nums[j] > nums[k] && lis[j] < lis[k] + 1) {
-                    lis[j] = lis[k] + 1;
+                if (nums[j] > nums[k] ) {
+                    // Max of current lis or (previous+1) k+1
+                    lis[j] = Math.max(lis[j], lis[k]+1);
                 }
             }
         }

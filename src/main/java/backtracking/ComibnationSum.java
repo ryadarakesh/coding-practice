@@ -35,7 +35,7 @@ public class ComibnationSum {
             if (arr.get(i) <= sum) {
                 currList.add(arr.get(i));
                 combinationSum(result,arr,currList, sum-arr.get(i), i);
-                currList.remove(arr.get(i));
+                currList.remove(currList.size()-1);
             }
         }
     }

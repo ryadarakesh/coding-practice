@@ -16,7 +16,7 @@ public class DPKnapsack {
         if (n == 0 || W == 0) {
             return 0;
         }
-        // If current item weight is more that available weigh W we can simply go with nect items
+        // If current item weight is more that available weigh W we can simply go with next items
         if (wt[n - 1] > W) {
             return knapSackNonDP(W, wt, val, n - 1);
         }
@@ -27,7 +27,7 @@ public class DPKnapsack {
     static int knapSackDP(int Weight, int wt[],
                           int val[], int n) {
         int[][] dp = new int[n + 1][Weight + 1];
-        // Here i sows items count to consider
+        // Here i shows items count to consider
         for (int i = 0; i <= n; i++) {
             for (int cw = 0; cw <= Weight; cw++) {
                 // If items are zero or weight is zero set dp as zero
